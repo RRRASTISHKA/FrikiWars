@@ -1,0 +1,12 @@
+Cromo 2 - Cromo 4 - Cromo 5 - false
+Cromo 5 - Cromo 8 - Cromo 1 - false
+Cromo 9 - Cromo 4 - Cromo 3 - false
+Cromo 3 - Cromo 7 - Cromo 4 - false
+Cromo 4 - Cromo 9 - Cromo 5 - false
+Cromo 6 - Cromo 10 - Cromo 2 - false
+Cromo 2 - Cromo 4 - Cromo 8 - false
+Cromo 7 - Cromo 5 - Cromo 9 - true
+Cromo 4 - Cromo 7 - Cromo 8 - false
+Cromo 5 - Cromo 10 - Cromo 2 - false
+Cromo 8 - Cromo 3 - Cromo 5 - false
+Cromo 7 - Cromo 10 - Cromo 9 - false
