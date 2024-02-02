@@ -16,6 +16,7 @@ import java.io.Writer;
 import java.util.regex.*;
 import javax.swing.JOptionPane;
 import java.io.IOException;
+import java.awt.Color;
 
 public class StarWars extends JFrame {
 
@@ -45,6 +46,7 @@ public class StarWars extends JFrame {
     private boolean centButtonPressed = false;
     private boolean drButtonPressed = false;
     
+    
     private static final String FILE_PATH = "C:\\Users\\Profesor\\Documents\\Proyectos Java\\StarWars\\src\\";
     private Writer writer;
     
@@ -72,12 +74,14 @@ public class StarWars extends JFrame {
 
 		ImageIcon imgMuneco = new ImageIcon("C:\\Users\\Profesor\\Desktop\\StarWars\\"+num+".jpg");
 		JLabel Muneco = new JLabel(imgMuneco);
-		Muneco.setBounds(290, 31, 225, 225);
+		Muneco.setBounds(293, 32, 225, 225);
 		contentPane.add(Muneco);
 		contentPane.setComponentZOrder(Muneco,0);
 		
 		ImageIcon imgFondo = new ImageIcon("C:\\Users\\Profesor\\Desktop\\StarWars\\Fondo pantalla.jpg");
 		JLabel fondo= new JLabel(imgFondo);
+		fondo.setBackground(new Color(0, 0, 64));
+		fondo.setForeground(new Color(255, 255, 255));
 		fondo.setBounds(0,0,810,635);
 		contentPane.add(fondo);
 		
@@ -231,6 +235,13 @@ public class StarWars extends JFrame {
 		contentPane.add(volver);
 		contentPane.setComponentZOrder(volver,0);
 		
+		JLabel lblNewLabel = new JLabel("llevas "+tiradas+" acierto");
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setBounds(42, 286, 99, 14);
+		contentPane.add(lblNewLabel);
+		contentPane.setComponentZOrder(lblNewLabel,0);
+		
+		
 		volver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(e.getSource()==volver) {
@@ -244,6 +255,7 @@ public class StarWars extends JFrame {
 			            centButtonPressed = false;
 			            drButtonPressed = false;
 			            counter++;
+			            lblNewLabel.setText("llevas "+tiradas+" acierto");
 			            
 			            
 			            if (counter == 10) {
@@ -282,5 +294,4 @@ public class StarWars extends JFrame {
 	        centButtonPressed = true;
 	        drButtonPressed = true;
 	    }
-	 	
 }
